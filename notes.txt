@@ -1,0 +1,6 @@
+from collections import namedtuple
+Regression_Result = namedtuple('Regression_Result', ['slope', 'intercept','r_value','p_value','standard_error'])
+
+
+dist_goal_df = df[['arenaAdjustedShotDistance', 'goal']]
+dist_goal_df = dist_goal_df.rename(columns={'arenaAdjustedShotDistance': 'distance', 'goal': 'is_goal'})
